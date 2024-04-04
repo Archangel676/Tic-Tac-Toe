@@ -2,6 +2,8 @@
 #include "TicTacToe.h"
 #include <string>
 
+using namespace std;
+
 // TicTacToe
 
 TicTacToe::TicTacToe()
