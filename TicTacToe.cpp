@@ -6,10 +6,10 @@
 char currentPlayer;
 char board[3][3];
 
-TicTacToe()
+TicTacToe::TicTacToe()
 {
-  char '-';
-  char gameBoard[3][3];
+  currentPlayer = 'X';
+  board = {};
 }
 
 string toString();
