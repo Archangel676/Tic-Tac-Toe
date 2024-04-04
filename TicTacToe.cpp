@@ -1,5 +1,6 @@
 
 #include "TicTacToe.h"
+#include <string>
 
 // TicTacToe
 
