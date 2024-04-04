@@ -1,6 +1,8 @@
 #ifndef TICTACTOE_H
 #define TICTACTOE_H
 
+#include <string>
+
 class TicTacToe {
 private:
   char currentPlayer;
