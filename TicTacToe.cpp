@@ -55,8 +55,8 @@ bool TicTacToe::isValidMove(int row, int col)
         return true;
       }
     }
-  } else
-    return false;
+  }
+  return false;
 }
 
 void TicTacToe::makeMove(int row, int col)
