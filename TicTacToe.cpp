@@ -49,12 +49,14 @@ char TicTacToe::getCurrentPlayer()
 
 bool TicTacToe::isValidMove(int row, int col)
 {
-  if ((row >= 0) && (row <= 2))
-    if ((col >= 0) && (col <= 2))
-      if (board[row][col])
+  if ((row >= 0) && (row <= 2)) {
+    if ((col >= 0) && (col <= 2)) {
+      if (board[row][col]) {
         return true;
-      else
-        return false;
+      }
+    }
+  } else
+    return false;
 }
 
 void TicTacToe::makeMove(int row, int col)
