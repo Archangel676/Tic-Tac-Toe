@@ -61,6 +61,13 @@ bool TicTacToe::isValidMove(int row, int col)
 
 void TicTacToe::makeMove(int row, int col)
 {
+  if (isValidMove(row, col)) {
+    board[row][col] = currentPlayer;
+    if (currentPlayer == 'X')
+      currentPlayer = 'O';
+    else
+      currentPlayer = 'X';
+  }
 }
 
 char TicTacToe::getWinner()
