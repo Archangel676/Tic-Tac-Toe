@@ -9,8 +9,6 @@ using namespace std;
 TicTacToe::TicTacToe()
 {
   currentPlayer = 'X';
-  board[3][3];
-
   int row = 3;
   int col = 3;
 
@@ -31,7 +29,10 @@ string TicTacToe::toString()
 
 char TicTacToe::getCurrentPlayer()
 {
-  return 'a';
+  if (currentPlayer = 'X')
+    return 'X';
+  else
+    return 'O';
 }
 
 bool TicTacToe::isDone()
