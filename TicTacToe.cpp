@@ -32,7 +32,7 @@ string TicTacToe::toString()
     boardString += "\n";
   }
 
-  return "string";
+  return boardString;
 }
 
 char TicTacToe::getCurrentPlayer()
