@@ -51,7 +51,7 @@ bool TicTacToe::isValidMove(int row, int col)
 {
   if ((row >= 0) && (row <= 2)) {
     if ((col >= 0) && (col <= 2)) {
-      if (board[row][col]) {
+      if (board[row][col] == '-') {
         return true;
       }
     }
