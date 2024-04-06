@@ -17,7 +17,7 @@ TicTacToe::TicTacToe()
       if (j < 2) {
         board[i][j] = '-';
       } else
-        board[i][j] = '-';
+        board[i][j] = '-\n';
     }
   }
 }
