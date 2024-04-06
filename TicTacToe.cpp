@@ -5,12 +5,12 @@
 using namespace std;
 
 // TicTacToe
+const int row = 3;
+const int col = 3;
 
 TicTacToe::TicTacToe()
 {
   currentPlayer = 'X';
-  int row = 3;
-  int col = 3;
 
   for (int i = 0; i < row; i++) {
     for (int j = 0; j < col; j++) {
@@ -21,6 +21,17 @@ TicTacToe::TicTacToe()
 
 string TicTacToe::toString()
 {
+  string boardString = "";
+  for (int i = 0; i < row; i++) {
+    for (int j = 0; j < col; j++) {
+      if (j < 2)
+        boardString = board[i][j] + " ";
+      else
+        boardString = board[i][j];
+    }
+    boardString += "\n";
+  }
+
   return "string";
 }
 
