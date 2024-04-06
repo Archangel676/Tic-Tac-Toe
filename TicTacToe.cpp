@@ -5,11 +5,11 @@
 using namespace std;
 
 // TicTacToe
-const int row = 3;
-const int col = 3;
 
 TicTacToe::TicTacToe()
 {
+  int row = 3;
+  int col = 3;
   currentPlayer = 'X';
 
   for (int i = 0; i < row; i++) {
@@ -21,6 +21,9 @@ TicTacToe::TicTacToe()
 
 string TicTacToe::toString()
 {
+  int row = 3;
+  int col = 3;
+
   string boardString = "";
   for (int i = 0; i < row; i++) {
     for (int j = 0; j < col; j++) {
@@ -44,9 +47,18 @@ char TicTacToe::getCurrentPlayer()
     return 'O';
 }
 
-bool TicTacToe::isDone()
+bool TicTacToe::isValidMove(int row, int col)
 {
-  return false;
+  if ((row >= 0) && (row <= 2))
+    if ((col >= 0) && (col <= 2))
+      if (board[row][col])
+        return true;
+      else
+        return false;
+}
+
+void TicTacToe::makeMove(int row, int col)
+{
 }
 
 char TicTacToe::getWinner()
@@ -54,11 +66,7 @@ char TicTacToe::getWinner()
   return 'L';
 }
 
-bool TicTacToe::isValidMove(int row, int col)
+bool TicTacToe::isDone()
 {
   return false;
-}
-
-void TicTacToe::makeMove(int row, int col)
-{
 }
