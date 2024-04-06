@@ -29,7 +29,8 @@ string TicTacToe::toString()
       else
         boardString = boardString + board[i][j];
     }
-    boardString += "\n";
+    if (i < 2)
+      boardString += "\n";
   }
 
   return boardString;
