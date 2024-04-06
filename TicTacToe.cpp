@@ -38,7 +38,7 @@ string TicTacToe::toString()
 
 char TicTacToe::getCurrentPlayer()
 {
-  if (currentPlayer = 'X')
+  if (currentPlayer == 'X')
     return 'X';
   else
     return 'O';
