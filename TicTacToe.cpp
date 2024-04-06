@@ -14,42 +14,38 @@ TicTacToe::TicTacToe()
 
   for (int i = 0; i < row; i++) {
     for (int j = 0; j < col; j++) {
-      if (j < 2) {
-        board[i][j] = '-';
-      } else
-        board[i][j] = '-\n';
+      board[i][j] = '-';
     }
   }
-}
 
-string TicTacToe::toString()
-{
-  return "string";
-}
+  string TicTacToe::toString()
+  {
+    return "string";
+  }
 
-char TicTacToe::getCurrentPlayer()
-{
-  if (currentPlayer = 'X')
-    return 'X';
-  else
-    return 'O';
-}
+  char TicTacToe::getCurrentPlayer()
+  {
+    if (currentPlayer = 'X')
+      return 'X';
+    else
+      return 'O';
+  }
 
-bool TicTacToe::isDone()
-{
-  return false;
-}
+  bool TicTacToe::isDone()
+  {
+    return false;
+  }
 
-char TicTacToe::getWinner()
-{
-  return 'L';
-}
+  char TicTacToe::getWinner()
+  {
+    return 'L';
+  }
 
-bool TicTacToe::isValidMove(int row, int col)
-{
-  return false;
-}
+  bool TicTacToe::isValidMove(int row, int col)
+  {
+    return false;
+  }
 
-void TicTacToe::makeMove(int row, int col)
-{
-}
+  void TicTacToe::makeMove(int row, int col)
+  {
+  }
