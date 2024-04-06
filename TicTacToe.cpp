@@ -16,36 +16,39 @@ TicTacToe::TicTacToe()
 
   for (int i = 0; i < row; i++) {
     for (int j = 0; j < col; j++) {
-      board[i][j] = '-';
+      if (j < 2) {
+        board[i][j] = '-';
+      } else
+        board[i][j] = '-\n';
     }
   }
 }
 
-string toString()
+string TicTacToe::toString()
 {
   return "string";
 }
 
-char getCurrentPlayer()
+char TicTacToe::getCurrentPlayer()
 {
   return 'a';
 }
 
-bool isDone()
+bool TicTacToe::isDone()
 {
   return false;
 }
 
-char getWinner()
+char TicTacToe::getWinner()
 {
   return 'L';
 }
 
-bool isValidMove(int row, int col)
+bool TicTacToe::isValidMove(int row, int col)
 {
   return false;
 }
 
-void makeMove(int row, int col)
+void TicTacToe::makeMove(int row, int col)
 {
 }

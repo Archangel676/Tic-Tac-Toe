@@ -10,7 +10,7 @@ private:
 
 public:
   TicTacToe();
-  string toString();
+  std::string toString();
   char getCurrentPlayer();
   bool isDone();
   char getWinner();
