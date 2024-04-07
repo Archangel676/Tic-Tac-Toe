@@ -95,7 +95,7 @@ char TicTacToe::getWinner()
 
   // If so, return the winner ('X' or 'O').
   // If no one has won, returns '-'.
-  return 'L';
+  return '-';
 }
 
 bool TicTacToe::isDone()
