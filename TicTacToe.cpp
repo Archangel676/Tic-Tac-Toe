@@ -107,6 +107,7 @@ char TicTacToe::getWinner()
   }
 
   // or three on one of the two diagonals
+  // Top left to bottom right
   for (int i = 0; i < 3; i++) {
     int diagonalCountX = 0;
     int diagonalCountO = 0;
@@ -114,6 +115,23 @@ char TicTacToe::getWinner()
       diagonalCountX++;
     } else if (board[i][i] == 'O') {
       diagonalCountO++;
+    }
+    if (diagonalCountX == 3)
+      return 'X';
+    else if (diagonalCountO == 3)
+      return 'O';
+  }
+
+  // Bottom left to top right
+  for (int i = 2; i >= 0; i--) {
+    int diagonalCountX = 0;
+    int diagonalCountO = 0;
+    for (int j = 0; j < 3; j++) {
+      if (board[i][j] == 'X') {
+        diagonalCountX++;
+      } else if (board[i][j] == 'O') {
+        diagonalCountO++;
+      }
     }
     if (diagonalCountX == 3)
       return 'X';
