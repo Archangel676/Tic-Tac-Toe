@@ -138,77 +138,79 @@ TEST_CASE("makeMove - invalid")
   CHECK(boardString5 == "X - -\n- - -\n- - -");
 }
 
-// TEST_CASE( "getWinner - rows & cols" ) {
-//     {   //scope to make t1 temporary
-//         TicTacToe t1;
-//         CHECK( t1.getWinner() == '-' );
-//         t1.makeMove(1, 0);
-//         t1.makeMove(0, 0);
-//         t1.makeMove(1, 1);
-//         t1.makeMove(0, 1);
-//         CHECK( t1.getWinner() == '-' );
-//         t1.makeMove(1, 2);
-//         CHECK( t1.getWinner() == 'X' );
-//     }
+TEST_CASE("getWinner - rows & cols")
+{
+  { // scope to make t1 temporary
+    TicTacToe t1;
+    CHECK(t1.getWinner() == '-');
+    t1.makeMove(1, 0);
+    t1.makeMove(0, 0);
+    t1.makeMove(1, 1);
+    t1.makeMove(0, 1);
+    CHECK(t1.getWinner() == '-');
+    t1.makeMove(1, 2);
+    CHECK(t1.getWinner() == 'X');
+  }
 
-//     {
-//         TicTacToe t1;
-//         t1.makeMove(1, 0);
-//         t1.makeMove(0, 0);
-//         t1.makeMove(1, 1);
-//         t1.makeMove(0, 1);
-//         t1.makeMove(2, 0);
-//         CHECK( t1.getWinner() == '-' );
-//         t1.makeMove(0, 2);
-//         CHECK( t1.getWinner() == 'O' );
-//     }
+  {
+    TicTacToe t1;
+    t1.makeMove(1, 0);
+    t1.makeMove(0, 0);
+    t1.makeMove(1, 1);
+    t1.makeMove(0, 1);
+    t1.makeMove(2, 0);
+    CHECK(t1.getWinner() == '-');
+    t1.makeMove(0, 2);
+    CHECK(t1.getWinner() == 'O');
+  }
 
-//     {
-//         TicTacToe t1;
-//         t1.makeMove(0, 2);
-//         t1.makeMove(0, 0);
-//         t1.makeMove(1, 2);
-//         t1.makeMove(0, 1);
-//         CHECK( t1.getWinner() == '-' );
-//         t1.makeMove(2, 2);
-//         CHECK( t1.getWinner() == 'X' );
-//     }
+  {
+    TicTacToe t1;
+    t1.makeMove(0, 2);
+    t1.makeMove(0, 0);
+    t1.makeMove(1, 2);
+    t1.makeMove(0, 1);
+    CHECK(t1.getWinner() == '-');
+    t1.makeMove(2, 2);
+    CHECK(t1.getWinner() == 'X');
+  }
 
-//     {
-//         TicTacToe t1;
-//         t1.makeMove(0, 2);
-//         t1.makeMove(0, 0);
-//         t1.makeMove(1, 2);
-//         t1.makeMove(1, 0);
-//         t1.makeMove(1, 1);
-//         CHECK( t1.getWinner() == '-' );
-//         t1.makeMove(2, 0);
-//         CHECK( t1.getWinner() == 'O' );
-//     }
-// }
+  {
+    TicTacToe t1;
+    t1.makeMove(0, 2);
+    t1.makeMove(0, 0);
+    t1.makeMove(1, 2);
+    t1.makeMove(1, 0);
+    t1.makeMove(1, 1);
+    CHECK(t1.getWinner() == '-');
+    t1.makeMove(2, 0);
+    CHECK(t1.getWinner() == 'O');
+  }
+}
 
-// TEST_CASE( "getWinner - diagonal" ) {
-//     {   //scope to make t1 temporary
-//         TicTacToe t1;
-//         t1.makeMove(0, 0);
-//         t1.makeMove(0, 1);
-//         t1.makeMove(1, 1);
-//         t1.makeMove(0, 2);
-//         t1.makeMove(2, 2);
-//         CHECK( t1.getWinner() == 'X' );
-//     }
+TEST_CASE("getWinner - diagonal")
+{
+  { // scope to make t1 temporary
+    TicTacToe t1;
+    t1.makeMove(0, 0);
+    t1.makeMove(0, 1);
+    t1.makeMove(1, 1);
+    t1.makeMove(0, 2);
+    t1.makeMove(2, 2);
+    CHECK(t1.getWinner() == 'X');
+  }
 
-//     {
-//         TicTacToe t1;
-//         t1.makeMove(0, 0);
-//         t1.makeMove(1, 1);
-//         t1.makeMove(0, 1);
-//         t1.makeMove(0, 2);
-//         t1.makeMove(2, 1);
-//         t1.makeMove(2, 0);
-//         CHECK( t1.getWinner() == 'O' );
-//     }
-// }
+  {
+    TicTacToe t1;
+    t1.makeMove(0, 0);
+    t1.makeMove(1, 1);
+    t1.makeMove(0, 1);
+    t1.makeMove(0, 2);
+    t1.makeMove(2, 1);
+    t1.makeMove(2, 0);
+    CHECK(t1.getWinner() == 'O');
+  }
+}
 
 // TEST_CASE( "isDone - winner" ) {
 //     {   //scope to make t1 temporary
