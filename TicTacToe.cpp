@@ -89,7 +89,7 @@ char TicTacToe::getWinner()
     else if (rowCountO >= 3)
       return 'O';
     else
-      return 'L';
+      return '-';
   }
 
   // three in a column,
