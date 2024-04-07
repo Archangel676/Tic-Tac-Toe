@@ -126,7 +126,8 @@ char TicTacToe::getWinner()
   for (int i = 2; i >= 0; i--) {
     int diagonalCountX = 0;
     int diagonalCountO = 0;
-    for (int j = 0; j < 3; j++) {
+    int j = 2 - i;
+    while (j <= 2) {
       if (board[i][j] == 'X') {
         diagonalCountX++;
       } else if (board[i][j] == 'O') {
