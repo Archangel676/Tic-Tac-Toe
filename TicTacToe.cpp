@@ -125,21 +125,23 @@ char TicTacToe::getWinner()
   }
 
   // Bottom left to top right
-  for (int i = 2; i >= 0; i--) {
+  for (int count = 0; count < 1; count++) {
     int diagonalCountX = 0;
     int diagonalCountO = 0;
-    int j = 2 - i;
+    for (int i = 2; i >= 0; i--) {
+      int j = 2 - i;
 
-    if (board[i][j] == 'X') {
-      diagonalCountX++;
-    } else if (board[i][j] == 'O') {
-      diagonalCountO++;
+      if (board[i][j] == 'X') {
+        diagonalCountX++;
+      } else if (board[i][j] == 'O') {
+        diagonalCountO++;
+      }
+
+      if (diagonalCountX == 3)
+        return 'X';
+      else if (diagonalCountO == 3)
+        return 'O';
     }
-
-    if (diagonalCountX == 3)
-      return 'X';
-    else if (diagonalCountO == 3)
-      return 'O';
   }
 
   // If so, return the winner ('X' or 'O').
