@@ -127,13 +127,13 @@ char TicTacToe::getWinner()
     int diagonalCountX = 0;
     int diagonalCountO = 0;
     int j = 2 - i;
-    {
-      if (board[i][j] == 'X') {
-        diagonalCountX++;
-      } else if (board[i][j] == 'O') {
-        diagonalCountO++;
-      }
+
+    if (board[i][j] == 'X') {
+      diagonalCountX++;
+    } else if (board[i][j] == 'O') {
+      diagonalCountO++;
     }
+
     continue;
     if (diagonalCountX == 3)
       return 'X';
