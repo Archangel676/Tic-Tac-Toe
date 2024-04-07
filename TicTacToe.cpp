@@ -143,12 +143,15 @@ char TicTacToe::getWinner()
         return 'O';
     }
   }
-
-  // If so, return the winner ('X' or 'O').
   return '-';
 }
 
 bool TicTacToe::isDone()
 {
+  // Returns true
+  // if someone has won
+  // is winner != '-'
+  // or there are no more valid moves
+  // if *any move loop* is valid move
   return false;
 }
