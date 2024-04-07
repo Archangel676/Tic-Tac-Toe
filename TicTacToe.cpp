@@ -72,7 +72,7 @@ void TicTacToe::makeMove(int row, int col)
 
 char TicTacToe::getWinner()
 {
-  // three in a row,
+  // three in a row
   for (int i = 0; i < 3; i++) {
     int rowCountX = 0;
     int rowCountO = 0;
@@ -89,7 +89,22 @@ char TicTacToe::getWinner()
       return 'O';
   }
 
-  // three in a column,
+  // three in a column
+  for (int i = 0; i < 3; i++) {
+    int colCountX = 0;
+    int colCountO = 0;
+    for (int j = 0; j < 3; j++) {
+      if (board[j][i] == 'X') {
+        colCountX++;
+      } else if (board[j][i] == 'O') {
+        colCountO++;
+      }
+    }
+    if (colCountX >= 3)
+      return 'X';
+    else if (colCountO >= 3)
+      return 'O';
+  }
 
   // or three on one of the two diagonals).
 
