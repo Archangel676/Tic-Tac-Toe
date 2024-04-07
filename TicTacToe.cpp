@@ -73,7 +73,6 @@ void TicTacToe::makeMove(int row, int col)
 char TicTacToe::getWinner()
 {
   // three in a row,
-
   for (int i = 0; i < 3; i++) {
     int rowCountX = 0;
     int rowCountO = 0;
