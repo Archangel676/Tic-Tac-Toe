@@ -83,9 +83,9 @@ char TicTacToe::getWinner()
         rowCountO++;
       }
     }
-    if (rowCountX >= 3)
+    if (rowCountX == 3)
       return 'X';
-    else if (rowCountO >= 3)
+    else if (rowCountO == 3)
       return 'O';
   }
 
@@ -100,16 +100,28 @@ char TicTacToe::getWinner()
         colCountO++;
       }
     }
-    if (colCountX >= 3)
+    if (colCountX == 3)
       return 'X';
-    else if (colCountO >= 3)
+    else if (colCountO == 3)
       return 'O';
   }
 
-  // or three on one of the two diagonals).
+  // or three on one of the two diagonals
+  for (int i = 0; i < 3; i++) {
+    int diagonalCountX = 0;
+    int diagonalCountO = 0;
+    if (board[i][i] == 'X') {
+      diagonalCountX++;
+    } else if (board[i][i] == 'O') {
+      diagonalCountO++;
+    }
+    if (diagonalCountX == 3)
+      return 'X';
+    else if (diagonalCountO == 3)
+      return 'O';
+  }
 
   // If so, return the winner ('X' or 'O').
-  // If no one has won, returns '-'.
   return '-';
 }
 
