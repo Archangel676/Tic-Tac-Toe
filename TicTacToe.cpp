@@ -151,9 +151,20 @@ bool TicTacToe::isDone()
   if (getWinner() != '-') {
     return true;
   }
-  //
-  // isValidMove(int row, int col)
+
+  int validMoveCount = 0;
   // or there are no more valid moves
+  for (int i = 0; i < 3; i++) {
+    for (int j = 0; j < 3; j++) {
+      if (isValidMove(i, j)) {
+        validMoveCount++;
+      }
+    }
+  }
+  if (validMoveCount == 0) {
+    return true;
+  }
   // if *any move loop* is valid move
+
   return false;
 }
