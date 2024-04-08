@@ -148,9 +148,11 @@ char TicTacToe::getWinner()
 
 bool TicTacToe::isDone()
 {
-  // Returns true
-  // if someone has won
-  // is winner != '-'
+  if (getWinner() != '-') {
+    return true;
+  }
+  //
+  // isValidMove(int row, int col)
   // or there are no more valid moves
   // if *any move loop* is valid move
   return false;
