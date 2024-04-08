@@ -212,54 +212,56 @@ TEST_CASE("getWinner - diagonal")
   }
 }
 
-// TEST_CASE( "isDone - winner" ) {
-//     {   //scope to make t1 temporary
-//         TicTacToe t1;
-//         CHECK( t1.isDone() == false );
-//         t1.makeMove(1, 0);
-//         t1.makeMove(0, 0);
-//         t1.makeMove(1, 1);
-//         t1.makeMove(0, 1);
-//         CHECK( t1.isDone() == false );
-//         t1.makeMove(1, 2);
-//         CHECK( t1.isDone() == true );
-//     }
+TEST_CASE("isDone - winner")
+{
+  { // scope to make t1 temporary
+    TicTacToe t1;
+    CHECK(t1.isDone() == false);
+    t1.makeMove(1, 0);
+    t1.makeMove(0, 0);
+    t1.makeMove(1, 1);
+    t1.makeMove(0, 1);
+    CHECK(t1.isDone() == false);
+    t1.makeMove(1, 2);
+    CHECK(t1.isDone() == true);
+  }
 
-//     {
-//         TicTacToe t1;
-//         t1.makeMove(0, 0);
-//         t1.makeMove(1, 1);
-//         t1.makeMove(0, 1);
-//         t1.makeMove(0, 2);
-//         t1.makeMove(2, 1);
-//         CHECK( t1.isDone() == false );
-//         t1.makeMove(2, 0);
-//         CHECK( t1.isDone() == true );
-//     }
+  {
+    TicTacToe t1;
+    t1.makeMove(0, 0);
+    t1.makeMove(1, 1);
+    t1.makeMove(0, 1);
+    t1.makeMove(0, 2);
+    t1.makeMove(2, 1);
+    CHECK(t1.isDone() == false);
+    t1.makeMove(2, 0);
+    CHECK(t1.isDone() == true);
+  }
 
-//     {
-//         TicTacToe t1;
-//         t1.makeMove(0, 2);
-//         t1.makeMove(0, 0);
-//         t1.makeMove(1, 2);
-//         t1.makeMove(0, 1);
-//         t1.makeMove(2, 2);
-//         CHECK( t1.isDone() == true );
-//     }
-// }
+  {
+    TicTacToe t1;
+    t1.makeMove(0, 2);
+    t1.makeMove(0, 0);
+    t1.makeMove(1, 2);
+    t1.makeMove(0, 1);
+    t1.makeMove(2, 2);
+    CHECK(t1.isDone() == true);
+  }
+}
 
-// TEST_CASE( "isDone - draw" ) {
-//     TicTacToe t1;
-//     t1.makeMove(0, 0);
-//     t1.makeMove(1, 0);
-//     t1.makeMove(0, 1);
-//     t1.makeMove(1, 1);
-//     t1.makeMove(1, 2);
-//     t1.makeMove(0, 2);
-//     t1.makeMove(2, 0);
-//     t1.makeMove(2, 1);
-//     CHECK( t1.isDone() == false );
-//     t1.makeMove(2, 2);
-//     CHECK( t1.isDone() == true );
-//     CHECK( t1.getWinner() == '-' );
-// }
+TEST_CASE("isDone - draw")
+{
+  TicTacToe t1;
+  t1.makeMove(0, 0);
+  t1.makeMove(1, 0);
+  t1.makeMove(0, 1);
+  t1.makeMove(1, 1);
+  t1.makeMove(1, 2);
+  t1.makeMove(0, 2);
+  t1.makeMove(2, 0);
+  t1.makeMove(2, 1);
+  CHECK(t1.isDone() == false);
+  t1.makeMove(2, 2);
+  CHECK(t1.isDone() == true);
+  CHECK(t1.getWinner() == '-');
+}
