@@ -116,6 +116,7 @@ char TicTacToe::getWinner()
   if ((board[2][0] == board[1][1]) && (board[1][1] == board[0][2])) {
     return board[2][0];
   }
+
   return '-';
 }
 
@@ -134,7 +135,7 @@ bool TicTacToe::isDone()
       }
     }
   }
-  // if *any move loop* is valid move
+  // if *any move* is NOT a valid move
   if (validMoveCount == 0) {
     return true;
   }
