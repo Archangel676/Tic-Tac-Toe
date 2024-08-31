@@ -15,3 +15,5 @@ Ability to create classes that represent complex data types.
 ## Attribution
 
 The boilerplate starter code (Makefile, .vscode, .clang-format, and .gitignore) are from the VSCodeTemplates repository templates.
+
+The assignments and instructions are the property of the Computer Science Department at Chemeketa Community College.
